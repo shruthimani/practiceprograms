@@ -1,0 +1,15 @@
+package sample;
+
+public class sample {
+
+	public static void main(String[] args) throws InterruptedException {
+		char[] array={'H','A','P','P','Y',' ','N','E','W',' ','Y','E','A','R'};
+		for(int i=0;i<array.length;i++)
+		{
+			System.out.print(array[i]);
+			Thread.sleep(200);
+		}
+
+	}
+
+}
