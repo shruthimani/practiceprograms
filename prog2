@@ -1,0 +1,49 @@
+package sample;
+
+import java.util.Scanner;
+
+public class sample {
+
+	public static void main(String[] args) {
+		char ch;
+		Scanner s=new Scanner(System.in);
+      System.out.println("--------------------------------");
+      int[][] arr={{2,1,4,3},{6,5,0,7},{9,8,11,10},{13,12,15,14}};
+      for(int i=0;i<arr.length;i++)
+      {
+    	  System.out.print("| ");
+    	  for(int j=0;j<arr.length;j++){
+    		  if(arr[i][j]!=0)
+    		  System.out.print(arr[i][j]+"\t");
+    		 else{
+    			  System.out.print(" "+"\t");
+    		 // if(arr[i][j]==0){
+    		     //System.out.println("Enter your choice");
+    			//  ch=s.next().charAt(0);
+    			 // if(ch=='U')
+    			 // {
+    				//System.out.print(arr[i][j]+"\t");
+    			 // }
+    		  }
+    		  System.out.print("| ");
+     }
+    	  
+    	  System.out.println();
+    	  System.out.print("--------------------------------");
+    	  System.out.println();
+      }
+     
+}
+}
+
+output:
+--------------------------------
+ |   2 	|  1 	|   4 	|  3	  | 
+--------------------------------
+|  6	  |  5	  |   	 |  7	  | 
+--------------------------------
+|  9	  |  8	  |  11	  |  10	| 
+--------------------------------
+|   13	|  12	 |   15  |   14	| 
+--------------------------------
+
