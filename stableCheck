@@ -1,0 +1,56 @@
+
+
+ There are 5 input number in a series find out the stable and unstable numbers.
+221,1122,321,4455,4799
+Stable Numbers: Number of occurrences of each digit in a number is same.
+Ex: 1122, 3
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+
+public class StableCheck {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		ArrayList<Character> arr=new ArrayList<>();
+		ArrayList<Integer> freq=new ArrayList<>();
+		int f=0;
+		for(int i=0;i<5;i++)
+		{
+			f=0;
+			String val=s.next();
+			for(int j=0;j<val.length();j++)
+				arr.add(val.charAt(j));
+			
+			for(int j=0;j<val.length();j++)
+				freq.add(Collections.frequency(arr,arr.get(j)));
+			
+		    for(int j=0;j<freq.size()-1;j++)
+		    {
+		    	if(freq.get(j)!=freq.get(j+1))
+		    	{
+		    		f=1;
+		    		break;
+		    	}
+		    }
+		
+		    if(f==1)
+		    {
+		    	System.out.println(val+" is unstable");
+		    	
+		    }
+		    else
+		    	System.out.println(val+" is stable");
+		    arr.clear();
+		    freq.clear();
+		}
+ 
+	}
+
+}
