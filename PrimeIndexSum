@@ -1,0 +1,41 @@
+// Find the sum of elements in the prime index position of an array.
+23,784,56,89,41,78,99,65,52,32,12
+Ans: 56+89+78+65 = 288//
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class PrimeIndexSum {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		ArrayList<Integer> arr=new ArrayList<>();
+		while(s.hasNextInt())
+			arr.add(s.nextInt());
+		
+		int sum=0,flag=0;
+		for(int i=2;i<arr.size();i++)
+		{
+			flag=0;
+			for(int j=2;j<=i/2;j++)
+			{
+				
+				if(i%j == 0)
+				{
+					
+					flag=1;
+					break;
+				}
+			}
+			if(flag==0){
+				sum=sum+arr.get(i);
+			
+			}
+		}
+System.out.println(sum);
+	}
+
+}
